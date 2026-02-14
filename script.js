@@ -1,8 +1,8 @@
 // ==UserScript==Add commentMore actions
-// @name         Leia-me Auto Gemini Cheat (Automático)
+// @name         Leia Automático (Automático)
 // @namespace    http://tampermonkey.net/
 // @version      4.6
-// @description  Responde perguntas e avança automaticamente no Leia-me/Odilo com Gemini AI 😝
+// @description  Responde perguntas e avança automaticamente no Leia-me/Odilo com Gemini AI 😎
 // @author       Nikolas
 // @match        *://*odilo*/*
 // @grant        none
@@ -66,9 +66,9 @@
     const ui = document.createElement("div");
     ui.className = "gemini-box";
     ui.innerHTML = `
-        <h1>📘 Leitura Automática</h1>
-        <h2>😝 feito por @nikolas</h2>
-        <button id="toggleAuto" class="auto-off">⚙️ Desligar</button>
+        <h1>📘 Ler Automático</h1>
+        <h2>😝 de @nikolas</h2>
+        <button id="toggleAuto" class="auto-off">⚙️ Auto: OFF</button>
         <div id="status" style="font-size:13px; color:#ccc; text-align:center; margin-top:6px;">Aguardando</div>
     `;
     document.body.appendChild(ui);
@@ -78,7 +78,7 @@
 
     btnToggle.onclick = function () {
         autoMode = !autoMode;
-        this.textContent = `⚙️ Modo: ${autoMode ? 'Ligado' : 'Desligado'}`;
+        this.textContent = `⚙️ Auto: ${autoMode ? 'ON' : 'OFF'}`;
         this.classList.toggle("auto-on", autoMode);
         this.classList.toggle("auto-off", !autoMode);
         if (autoMode) {
