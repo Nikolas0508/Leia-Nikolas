@@ -66,9 +66,9 @@
     const ui = document.createElement("div");
     ui.className = "gemini-box";
     ui.innerHTML = `
-        <h1>📘 Leitura Avançada</h1>
-        <h2>🦇 by @nikolas</h2>
-        <button id="toggleAuto" class="auto-off">⚙️ Auto: OFF</button>
+        <h1>📘 Leitura Automática</h1>
+        <h2>😝 feito por @nikolas</h2>
+        <button id="toggleAuto" class="auto-off">⚙️ Desligar</button>
         <div id="status" style="font-size:13px; color:#ccc; text-align:center; margin-top:6px;">Aguardando</div>
     `;
     document.body.appendChild(ui);
@@ -78,7 +78,7 @@
 
     btnToggle.onclick = function () {
         autoMode = !autoMode;
-        this.textContent = `⚙️ Auto: ${autoMode ? 'ON' : 'OFF'}`;
+        this.textContent = `⚙️ Modo: ${autoMode ? 'Ligado' : 'Desligado'}`;
         this.classList.toggle("auto-on", autoMode);
         this.classList.toggle("auto-off", !autoMode);
         if (autoMode) {
